@@ -1,0 +1,135 @@
+{
+  // ****************************************************************
+  // vscode
+  // ****************************************************************
+  "workbench.startupEditor": "none", // 起動時にwelcomeページを非表示
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.tabSize": 4,
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "editor.autoIndent": "full",
+  "editor.linkedEditing": true,
+  "editor.renderLineHighlight": "all", // 現在の行と余白を強調表示
+  "editor.cursorBlinking": "smooth", // カーソルの点滅をスムーズにする
+  "editor.minimap.enabled": false, // minimapを無効化
+  "editor.renderWhitespace": "all", // 半角スペースを可視化
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.inlineSuggest.enabled": true, // サジェストをインライン表示
+  "terminal.integrated.enableMultiLinePasteWarning": false, // ターミナルに複数行の貼り付け時に警告を表示しない
+  "explorer.confirmDelete": false, // 削除時に確認しない
+  "explorer.confirmDragAndDrop": false, // ドラッグ&ドロップ時に確認しない
+  "extensions.autoUpdate": true, // プラグインを自動アップデート
+  "breadcrumbs.enabled": true, // パンくずリストを表示
+  "files.autoSave": "off",
+  "files.eol": "auto", // 改行文字はos由来のものにする
+  "[python]": {
+    "editor.formatOnType": false,
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // ****************************************************************
+  // vim
+  // ****************************************************************
+  "vim.leader": "<space>",
+  "vim.highlightedyank.enable": true, // yankした箇所をハイライト表示
+  "vim.visualstar": true, // カーソル上にある単語を*で検索
+  "vim.useCtrlKeys": true, // ctrlキーを使った操作が有効になる
+  "vim.easymotion": true, // easymotionを有効化
+  "vim.surround": true, // surroundを有効化
+  "vim.useSystemClipboard": true, // system clipboardと同期する
+  "vim.hlsearch": true,
+  "vim.autoindent": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // デフォルトのundoとredoの動作がおかしいのでリマップ
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
+    },
+    // 行頭への移動
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    // 行末への移動
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    // 対応する括弧への移動
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "after": [
+        "%"
+      ]
+    },
+    // コメントアウト
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.commentLine"
+        }
+      ]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    // ;;でサジェストを表示
+    {
+      "before": [
+        ";",
+        ";"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ]
+    },
+  ],
+}

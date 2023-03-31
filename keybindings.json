@@ -1,0 +1,84 @@
+[
+  // ****************************************************************
+  // サイドバー
+  // ****************************************************************
+  //explorer表示
+  {
+    "key": "shift+space shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+space e",
+    "command": "workbench.view.explorer"
+  }, //explorer表示
+  {
+    "key": "shift+space shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+space e",
+    "command": "workbench.view.explorer"
+  },
+  // git管理
+  {
+    "key": "shift+space shift+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "shift+space g",
+    "command": "workbench.view.scm"
+  },
+  // 検索
+  {
+    "key": "shift+space shift+f",
+    "command": "workbench.action.findInFiles",
+    "when": "!searchInputBoxFocus"
+  },
+  {
+    "key": "shift+space f",
+    "command": "workbench.action.findInFiles",
+    "when": "!searchInputBoxFocus"
+  },
+  // デバッグ
+  {
+    "key": "shift+space shift+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "shift+space d",
+    "command": "workbench.view.debug"
+  },
+  // ****************************************************************
+  //  エクスプローラーでの操作
+  // ****************************************************************
+  //新規ファイル作成
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  //新規フォルダ作成
+  {
+    "key": "f",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  //リネーム
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  //削除
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  //エクスプローラーでフォルダを開く
+  {
+    "key": "e",
+    "command": "revealFileInOS",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+]
